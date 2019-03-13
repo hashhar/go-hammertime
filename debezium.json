@@ -1,0 +1,18 @@
+{
+  "name": "dwh_connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "wal2json",
+    "slot.name": "debezium",
+    "database.hostname": "172.17.0.1",
+    "database.port": "5432",
+    "database.user": "gmdevqadb",
+    "database.password": "cdc_demo",
+    "database.dbname": "godamqadb_benchmark",
+    "database.server.name": "dwh_connector",
+    "schema.whitelist": "public",
+    "table.whitelist": "public.fclkp_managementlookup,public.ims_item",
+    "decimal.handling.mode": "string",
+    "poll.interval.ms": 50
+  }
+}
